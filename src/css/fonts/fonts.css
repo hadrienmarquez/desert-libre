@@ -1,0 +1,67 @@
+/* FONTS.CSS 
+ * Importing custom fonts.
+ ================================*/
+
+/*------------------------------------*\
+        Noah Regular
+\*------------------------------------*/
+/*
+ *  Used everywhere from title to text
+ * 
+ *************************************/
+@font-face {
+  font-family: "Noah";
+  src: url("./Noah-Regular.woff2") format("woff2"),
+    url("./Noah-Regular.woff") format("woff"),
+    url("./Noah-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*------------------------------------*\
+        Noah Regular Italic
+\*------------------------------------*/
+/*
+ *  Italic version
+ * 
+ *************************************/
+ @font-face {
+  font-family: "Noah";
+  src: url("./Noah-RegularItalic.woff2") format("woff2"),
+    url("./Noah-RegularItalic.woff") format("woff"),
+    url("./Noah-RegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/*------------------------------------*\
+        Noah Bold
+\*------------------------------------*/
+/*
+ *  Bold version
+ * 
+ *************************************/
+ @font-face {
+  font-family: "Noah";
+  src: url("./Noah-Bold.woff2") format("woff2"),
+    url("./Noah-Bold.woff") format("woff"),
+    url("./Noah-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*------------------------------------*\
+        Noah Bold italic
+\*------------------------------------*/
+/*
+ *  Bold italic version
+ * 
+ *************************************/
+ @font-face {
+  font-family: "Noah";
+  src: url("./Noah-BoldItalic.woff2") format("woff2"),
+    url("./Noah-BoldItalic.woff") format("woff"),
+    url("./Noah-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}

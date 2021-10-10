@@ -1,0 +1,18 @@
+/* style.CSS 
+ * Global styles
+ ================================*/
+
+/*------------------------------------*\
+        IMPORTS
+\*------------------------------------*/
+@import url("./normalize.css");
+@import url("./local.reset.css");
+@import url("./typography.css");
+@import url("./colors.css");
+
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
