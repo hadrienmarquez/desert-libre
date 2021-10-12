@@ -42,7 +42,7 @@
     <title>Désert libre</title>
 </svelte:head>
 
-<div class="panel grid">
+<main class="panel grid">
     <!-- Title -->
     <h1 class="title huge">Désert libre</h1>
 
@@ -55,7 +55,7 @@
 
     <!-- Bas de page -->
 
-</div>
+</main>
 
 <style>
     .panel {
@@ -64,8 +64,7 @@
         margin: 0px 15vw;
     }
 
-    .grid {
-        display: grid;
+    main {
         grid-template-columns: 1fr 3fr 1fr;
         grid-template-rows: 3fr 4fr 2fr;
     }
