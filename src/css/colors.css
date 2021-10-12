@@ -8,9 +8,10 @@
    ********************/
   /* --background: #354d75; */
 
-  /* Stroke
+  /* Primary Color
   *********************/
-  /* --stroke: #d42038; */
+  --primary-color: lightgray;
+  --secondary-color: gray;
 
   /* Text Palette
    ********************/
