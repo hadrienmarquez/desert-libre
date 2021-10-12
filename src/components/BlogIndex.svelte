@@ -1,51 +1,102 @@
 <script>
-    import { goto } from '$app/navigation';
-    export let posts;  
-
+  import LinkButton from "./LinkButton.svelte";
+  export let posts;
 </script>
 
 <main>
-    <ul>
-        {#each posts as {path, metadata: {title, date}}}
-            <li on:click={() => {goto(`/${path.replace(".md","")}`)}}>
-                    <h5>
-                        {title}
-                    </h5>
-                    <p class="small">{new Date(date).toLocaleDateString("fr-FR")}</p>
-            </li>
-            
-        {/each}
-    </ul>
+  <ul>
+    {#each posts as { path, metadata: { title, date } }}
+      <li
+        class="post grid"
+      >
+        <h5 class="post--title">
+          {title}
+        </h5>
+        <p class="post--date smaller">
+          {new Date(date).toLocaleDateString("fr-FR")}
+        </p>
+        <div class="post--button">
+            <LinkButton url={`/${path.replace(".md", "")}`}>Lire l'article</LinkButton>
+        </div>
+        
+      </li>
+    {/each}
+  </ul>
 </main>
 
-
 <style>
-    main {
-        overflow-y: scroll;
-        border: 2px solid black ;
-        grid-column:  2/3;
-        grid-row: 2/3;
-        
+  main {
+    overflow-y: scroll;
+    border: 2px solid black;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    scrollbar-width: none;
     
-    }
+  }
 
-    h5 {margin: 0px;
-        padding: 0.5rem 0 0;
-    }
+  /* No scrollbar, chrome compatibility  */
+  .main::-webkit-scrollbar {
+  display: none;
+}
 
-    ul {
-        background-color: lightgreen;
-        position: relative;
-        top: 0px;
-    }
+  h5 {
+    margin: 0px;
+    padding: 0.5rem 0 0;
+  }
 
-    li {
-        cursor: pointer;
-    }
+  ul {
+    position: relative;
+    top: 0px;
+    width: 90%;
+    margin: 0 auto;
+  }
 
-    li:nth-child(2n) {
-        background-color: lightgray;
-    }
+  .post {
+    border-bottom: 1px solid black;
 
+
+
+    height: 80px;
+    padding: 0 1em;
+    margin-bottom: 5px;
+
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+  }
+
+  .post--date {
+    font-style: italic;
+
+    grid-column: 3/4;
+    grid-row: 1/2;
+
+    justify-self: end;
+    align-self: center;
+  }
+
+  .post--title {
+
+    
+    grid-column: 1/3;
+    grid-row: 1/2;
+
+
+    justify-self: start;
+    align-self: center;
+
+  }
+
+  .post--tag {
+
+  }
+
+  .post--button {
+    grid-column: 3/4;
+    grid-row: 2/3;
+
+
+    justify-self: end;
+    align-self: start;
+}
 
 </style>
